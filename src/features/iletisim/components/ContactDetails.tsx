@@ -79,29 +79,35 @@ export default function ContactDetails() {
             {
               href: "https://instagram.com",
               icon: faInstagram,
+              label: "Instagram",
               className: "bg-gradient-to-r from-purple-500 to-pink-500",
             },
             {
               href: "https://twitter.com",
               icon: faXTwitter,
+              label: "Twitter",
               className: "bg-slate-800",
             },
             {
               href: "https://linkedin.com",
               icon: faLinkedin,
+              label: "LinkedIn",
               className: "bg-blue-600",
             },
             {
               href: "https://facebook.com",
               icon: faFacebook,
+              label: "Facebook",
               className: "bg-blue-700",
             },
-          ].map(({ href, icon, className }) => (
+          ].map(({ href, icon, label, className }) => (
             <a
               key={href}
               href={href}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label={label}
+              title={label}
               className={`w-10 h-10 ${className} rounded-xl flex items-center justify-center text-white hover:scale-110 transition-transform shadow-md`}
             >
               <FontAwesomeIcon icon={icon} className="w-5 h-5" />

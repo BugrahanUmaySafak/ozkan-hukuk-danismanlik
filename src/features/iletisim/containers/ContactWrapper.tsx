@@ -1,16 +1,33 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import PageHeader from "@/components/PageHeader";
 import ContactForm from "../components/ContactForm";
 import dynamic from "next/dynamic";
-import ContactDetails from "../components/ContactDetails";
 
 const ContactMap = dynamic(
   () => import("@/features/iletisim/components/ContactMap"),
   { ssr: false }
 );
 
+import StaticContactDetails from "@/features/iletisim/components/ContactDetails";
+
 export default function ContactWrapper() {
+  const [ContactDetailsComponent, setContactDetailsComponent] =
+    useState<React.ComponentType | null>(null);
+
+  useEffect(() => {
+    const isMobile = window.innerWidth < 1190;
+
+    if (isMobile) {
+      import("@/features/iletisim/components/ContactDetails").then((mod) =>
+        setContactDetailsComponent(() => mod.default)
+      );
+    } else {
+      setContactDetailsComponent(() => StaticContactDetails);
+    }
+  }, []);
+
   return (
     <>
       <PageHeader
@@ -24,7 +41,7 @@ export default function ContactWrapper() {
             <ContactForm />
           </div>
           <div className="xlgrid:col-span-4 w-full max-w-full min-w-0 mt-8 xlgrid:mt-0">
-            <ContactDetails />
+            {ContactDetailsComponent && <ContactDetailsComponent />}
           </div>
         </div>
         <ContactMap />

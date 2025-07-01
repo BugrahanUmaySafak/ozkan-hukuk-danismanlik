@@ -6,6 +6,10 @@ module.exports = {
     extend: {
       screens: {
         xlgrid: "1190px",
+        HamburgerMenu: "846px",
+      },
+      animation: {
+        "bounce-slow": "bounce 2.5s infinite",
       },
       borderRadius: {
         lg: "var(--radius)",

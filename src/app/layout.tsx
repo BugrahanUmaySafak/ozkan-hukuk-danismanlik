@@ -1,3 +1,6 @@
+import CallNowBanner from "@/components/call-now-banner/CallNowBanner";
+import Footer from "@/components/footer/footer";
+import Header from "@/components/header/Header";
 import "@/styles/globals.css";
 
 export default function RootLayout({
@@ -7,7 +10,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="tr">
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+        <CallNowBanner />
+        <Footer />
+      </body>
     </html>
   );
 }
