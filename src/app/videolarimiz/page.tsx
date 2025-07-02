@@ -1,15 +1,12 @@
-import type { Metadata } from "next";
+import VideoListWrapper from "@/features/videolarimiz/containers/VideoListWrapper";
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "İletişim | Özkan Hukuk Danışmanlık",
+  title: "Özkan Hukuk Danışmanlık - Videolarımız",
   description:
-    "Özkan Hukuk Danışmanlık ile iletişime geçin. Profesyonel hukuk danışmanlığı için bize ulaşın.",
+    "Özkan Hukuk Danışmanlık tarafından hazırlanan bilgilendirici videoları izleyin. Hukuki konularda farkındalık kazanın ve uzman görüşlerinden yararlanın.",
 };
 
 export default function Contact() {
-  return (
-    <>
-        Videolarimiz
-    </>
-  )
+  return <VideoListWrapper />;
 }

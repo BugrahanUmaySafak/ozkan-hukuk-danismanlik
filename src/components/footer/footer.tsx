@@ -14,14 +14,14 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="w-full border-t bg-[#fdf8f2] text-sm text-gray-500">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-        <p className="text-center sm:text-left text-xs">
+    <footer className="w-full pb-16 md:pb-20 border-t bg-[#fdf8f2] text-sm text-gray-500">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between">
+        <p className="text-center sm:text-left">
           &copy; {new Date().getFullYear()} Özkan Hukuk & Danışmanlık. Tüm
           hakları saklıdır.
         </p>
 
-        <nav className="flex flex-wrap justify-center sm:justify-end gap-x-6 gap-y-2">
+        <nav className="mt-2 sm:mt-0 flex gap-4">
           {navLinks.map((link) => {
             const isActive = pathname === link.href;
             return (

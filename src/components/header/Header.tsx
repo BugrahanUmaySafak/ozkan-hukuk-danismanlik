@@ -5,6 +5,7 @@ import {
   SheetContent,
   SheetTrigger,
   SheetTitle,
+  SheetDescription,
 } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { usePathname } from "next/navigation";
@@ -90,45 +91,53 @@ export default function Header() {
               </SheetTrigger>
               <SheetContent
                 side="top"
-                className="pt-6 pb-6 z-[9999] bg-[#f6f6f6] "
+                className="pt-6 pb-6 z-[9999] bg-[#f6f6f6] overflow-y-auto"
                 style={{ height: "auto", maxHeight: "100dvh" }}
               >
                 <SheetTitle className="sr-only">Mobil Menü</SheetTitle>
-                <div className="flex justify-center mb-6">
-                  <Link href="/" onClick={() => setOpen(false)}>
-                    <Image
-                      src="/logo/logo-256.webp"
-                      alt="Logo"
-                      width={192}
-                      height={72}
-                      className="w-[192px] h-[72px] object-contain"
-                    />
-                  </Link>
-                </div>
-                <nav className="space-y-4 px-4">
-                  {navigationItems.map((item) => (
-                    <Link
-                      key={item.name}
-                      href={item.href}
-                      onClick={() => setOpen(false)}
-                      className={`block px-4 py-3 rounded-lg text-lg font-medium transition-colors ${
-                        pathname === item.href
-                          ? "bg-blue-100 text-blue-700"
-                          : "text-gray-800 hover:bg-gray-100"
-                      }`}
-                    >
-                      {item.name}
+                <SheetDescription className="sr-only">
+                  Sayfa Geçişleri
+                </SheetDescription>
+
+                <div className="flex flex-col h-full">
+                  <div className="flex justify-center mb-6">
+                    <Link href="/" onClick={() => setOpen(false)}>
+                      <Image
+                        src="/logo/logo-256.webp"
+                        alt="Logo"
+                        width={192}
+                        height={72}
+                        className="w-[192px] h-[72px] object-contain"
+                      />
                     </Link>
-                  ))}
-                  <div className="pt-5">
-                    <a
-                      href="tel:+905432041420"
-                      className="block w-full text-center px-4 py-3 text-blue-600 text-lg font-bold bg-blue-50 hover:bg-blue-100 rounded-lg transition-colors"
-                    >
-                      +90 534 018 1933
-                    </a>
                   </div>
-                </nav>
+
+                  <nav className="space-y-4 px-4">
+                    {navigationItems.map((item) => (
+                      <Link
+                        key={item.name}
+                        href={item.href}
+                        onClick={() => setOpen(false)}
+                        className={`block px-4 py-3 rounded-lg text-lg font-medium transition-colors ${
+                          pathname === item.href
+                            ? "bg-blue-100 text-blue-700"
+                            : "text-gray-800 hover:bg-gray-100"
+                        }`}
+                      >
+                        {item.name}
+                      </Link>
+                    ))}
+
+                    <div className="pt-5">
+                      <a
+                        href="tel:+905432041420"
+                        className="block w-full text-center px-4 py-3 text-blue-600 text-lg font-bold bg-blue-50 hover:bg-blue-100 rounded-lg transition-colors"
+                      >
+                        +90 534 018 1933
+                      </a>
+                    </div>
+                  </nav>
+                </div>
               </SheetContent>
             </Sheet>
           </div>

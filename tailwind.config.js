@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        xlgrid: "1190px",
+        ContactGrid: "1190px",
         HamburgerMenu: "846px",
       },
       animation: {
