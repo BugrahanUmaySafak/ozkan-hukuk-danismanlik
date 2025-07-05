@@ -6,7 +6,7 @@ import { Phone } from "lucide-react";
 export default function CallNowBanner() {
   return (
     <Link
-      href="tel:+905432041420"
+      href="tel:+905340181933"
       aria-label="Hemen arayın"
       className="fixed bottom-4 right-4 z-40 flex items-center gap-2 rounded-full bg-blue-600 text-white px-4 py-3 shadow-md hover:bg-blue-700 transition-colors
                  text-sm font-medium

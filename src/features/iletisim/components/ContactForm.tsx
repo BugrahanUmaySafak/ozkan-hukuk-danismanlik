@@ -35,6 +35,13 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
 
   const form = useForm<WizardSchema>({
     resolver: zodResolver(contactSchema()),
+    defaultValues: {
+      name: "",
+      email: "",
+      phone: "",
+      title: "",
+      content: "",
+    },
   });
 
   const onSubmit = async (data: WizardSchema) => {

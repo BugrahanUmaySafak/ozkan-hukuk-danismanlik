@@ -1,4 +1,4 @@
-import ServiceCard from "@/components/ServiceCard";
+import ServiceCard from "@/features/hakkimda/components/ServiceCard";
 import { services } from "@/lib/data";
 
 export default function AboutServices() {

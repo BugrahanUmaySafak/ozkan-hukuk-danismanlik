@@ -20,7 +20,7 @@ export default function ContactInfoCard({
   const titleClass = "flex items-center text-lg font-semibold text-slate-800";
 
   return (
-    <Card>
+    <Card className="transition-transform duration-200 ease-in-out hover:shadow-lg hover:scale-[1.02] hover:bg-slate-50">
       <CardHeader className="pt-4 pb-2">
         <CardTitle className={titleClass}>
           <Icon className={iconClass} />

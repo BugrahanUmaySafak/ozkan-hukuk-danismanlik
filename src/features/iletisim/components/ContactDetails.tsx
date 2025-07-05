@@ -1,5 +1,5 @@
 import { MapPin, Phone, Mail, Clock, Users } from "lucide-react";
-import ContactInfoCard from "@/components/ContactInfoCard";
+import ContactInfoCard from "@/features/iletisim/components/ContactInfoCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faInstagram,
@@ -10,7 +10,7 @@ import {
 
 export default function ContactDetails() {
   return (
-    <div className="flex flex-col gap-y-16 h-full">
+    <div className="flex flex-col gap-y-8 ContactGrid:gap-y-16 h-full">
       <ContactInfoCard title="Adres" icon={MapPin} iconColor="text-red-500">
         <a
           href="https://www.google.com/maps/place/Avukat+Alper+Tuna+%C3%96zkan/@39.8406944,33.4994228,17z/data=!4m15!1m8!3m7!1s0x4081df7569936f09:0x5db73b4f4e8e2b46!2zRmFicmlrYWxhciwgVWx1YmF0bMSxIEhhc2FuIENkLiBObzoyMiwgNzExMDAgS8SxcsSxa2thbGUgTWVya2V6L0vEsXLEsWtrYWxl!3b1!8m2!3d39.8406944!4d33.4994228!16s%2Fg%2F11nnkxmqty!3m5!1s0x4081dfc47d45dad9:0x14c2d5e99e2f7579!8m2!3d39.8413091!4d33.5002971!16s%2Fg%2F11pzbkt940?entry=ttu&g_ep=EgoyMDI1MDYyNi4wIKXMDSoASAFQAw%3D%3D"
@@ -19,9 +19,9 @@ export default function ContactDetails() {
           className="block not-italic leading-relaxed text-center pt-1 hover:text-blue-600 transition-colors"
         >
           <address className="not-italic font-medium">
-            Yaylacık Mah. Ulubatlıhasan CAD <br />
+            Yaylacık Mahallesi Ulubatlıhasan Caddesi <br />
             Aydınlık Apartmanı, No: 22/9 <br />
-            71000 Kırıkkale Merkez/Kırıkkale
+            71000 Kırıkkale/Merkez
           </address>
         </a>
       </ContactInfoCard>

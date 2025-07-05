@@ -14,7 +14,7 @@ const ServiceCard = memo(function ServiceCard({
   icon: Icon,
 }: ServiceCardProps) {
   return (
-    <Card className="hover:shadow-lg transition-shadow duration-300">
+    <Card className="transition-transform duration-200 ease-in-out hover:shadow-lg hover:scale-[1.02] hover:bg-slate-50">
       <CardHeader className="flex items-center gap-4 pb-2">
         <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
           <Icon className="h-6 w-6 text-blue-600" aria-hidden="true" />

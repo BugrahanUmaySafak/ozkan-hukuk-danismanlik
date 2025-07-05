@@ -66,7 +66,7 @@ export default function Header() {
 
           <div className="hidden HamburgerMenu:flex items-center h-full">
             <a
-              href="tel:+905432041420"
+              href="tel:+905340181933"
               className="text-base font-bold text-blue-600 hover:text-blue-500"
             >
               +90 534 018 1933
@@ -130,7 +130,7 @@ export default function Header() {
 
                     <div className="pt-5">
                       <a
-                        href="tel:+905432041420"
+                        href="tel:+905340181933"
                         className="block w-full text-center px-4 py-3 text-blue-600 text-lg font-bold bg-blue-50 hover:bg-blue-100 rounded-lg transition-colors"
                       >
                         +90 534 018 1933

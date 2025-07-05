@@ -87,7 +87,7 @@ export default function VideoCard({
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <Card className="w-full overflow-hidden shadow-sm cursor-default">
+      <Card className="w-full overflow-hidden cursor-pointer transition-transform duration-200 ease-in-out hover:shadow-lg hover:scale-[1.02] hover:bg-slate-50">
         <div className="relative aspect-video w-full pointer-events-auto">
           <LiteYouTubeEmbed
             id={youtubeId}
